@@ -1,14 +1,9 @@
 <template>
 
-<<<<<<< HEAD
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js">
 </head>
         
-=======
-    <a link="stylesheet" href="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js"></a>
-
->>>>>>> main
 <main class="main">
 	<div class="container">
 		<section class="wrapper">

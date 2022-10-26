@@ -1,5 +1,9 @@
 <template>
 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js">
+</head>
+
 <div class="mx-5 mb-5">
     <h1 class="text-center fw-semibold mt-5 py-5">
       4 Unique Features. We Got You.

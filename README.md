@@ -1,6 +1,6 @@
-# SMU_United
+# SMU United
 
-Exchange Student Application
+https://is216-g7t4-smu-united.netlify.app/
 
 ## Recommended IDE Setup
 

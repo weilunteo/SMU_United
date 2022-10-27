@@ -1,10 +1,8 @@
 <template>
 
-<head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js">
-</head>
-        
-g<main class="main">
+
+<main class="main">
 	<div class="container">
 		<section class="wrapper">
 			<div class="heading">

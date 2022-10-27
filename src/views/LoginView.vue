@@ -73,6 +73,8 @@ export default {
 </script>
 
 <style lang="scss">
+// @import "./styles/_variables.scss";
+
 
 :root {
 	--color-white: #ffffff;

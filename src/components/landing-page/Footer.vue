@@ -50,17 +50,4 @@ export default {
     justify-content:center;
     align-items: center;
 }
-
-.home{
-    background-color: rgb(191, 220, 246);
-    width: 100%;
-    height: 100%;
-}
-
-h1{
-font-size: 30px ;
-font-weight: normal;
-color:black;
-
-}
 </style>

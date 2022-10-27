@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@lottiefiles/vue-lottie-player": "^1.0.9",
+    "firebase": "^9.12.1",
     "pinia": "^2.0.21",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"

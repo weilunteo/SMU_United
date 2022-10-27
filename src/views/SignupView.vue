@@ -1,6 +1,6 @@
 <template>
     
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js"> -->
 
 <main class="main">
 	<div class="container">
@@ -13,19 +13,19 @@
 			<form name="signin" class="form">
 				<div class="mb-4">
 					<label for="email" class="input-label fw-semibold mb-1">Email Address<span class="text-danger">*</span></label>
-					<input type="email" name="email" id="email" class="input-field" placeholder="Enter Email Address" required>
+					<input v-model="email" type="email" name="email" id="email" class="input-field" placeholder="Enter Email Address" required>
 				</div>
 				<div class="mb-4">
 					<label for="password" class="input-label fw-semibold mb-1">Password<span class="text-danger">*</span></label>
-					<input type="password" name="password" id="password" class="input-field" placeholder="Enter Password" required>
+					<input v-model="password" type="password" name="password" id="password" class="input-field" placeholder="Enter Password" required>
 				</div>
-                <div class="mb-4">
-					<label for="verify-assword" class="input-label fw-semibold mb-1">Verify Password<span class="text-danger">*</span></label>
-					<input type="password" name="verify-password" id="verify-password" class="input-field" placeholder="Enter Password Again" required>
-				</div>
+                <!-- <div class="mb-4">
+					<label for="verifyPassword" class="input-label fw-semibold mb-1">Verify Password<span class="text-danger">*</span></label>
+					<input v-model="verifyPassword" type="password" name="verifyPassword" id="verifyPassword" class="input-field" placeholder="Enter Password Again" required>
+				</div> -->
 				<div class="mb-4">
-				    <input type="checkbox"> I have read and consent to the <router-link to="/home" class="text text-links">terms and conditions</router-link>
-					<input type="submit" name="submit" class="input-submit mt-3 w-100 d-flex align-items-center justify-content-center" value="Create Account" disabled>
+				    <input type="checkbox"> I have read and consent to the <router-link to="/" class="text text-links">terms and conditions</router-link>
+					<input v-on:click="signUp" type="submit" name="submit" class="input-submit mt-3 w-100 d-flex align-items-center justify-content-center" value="Create Account">
 				</div>
 			</form>
 			<div class="striped">
@@ -35,10 +35,8 @@
 			</div>
 			<div class="method">
 				<div class="method-control">
-					<button type="button" 
-                    class="btn btn-light w-100 d-flex align-items-center justify-content-center"
-                    v-on:click="loginWithGoogle()"
-                    :disabled="isLoading">
+					<button type="button" v-on:click="signUpWithGoogle"
+                    class="btn btn-light w-100 d-flex align-items-center justify-content-center">
                     <GoogleIcon class="me-2" /> Sign Up with Google
                     </button>
 				</div>
@@ -53,21 +51,69 @@
 <script>
 import { toHandlers } from 'vue';
 import GoogleIcon from '../components/icons/GoogleIcon.vue';
+import {ref} from "vue";
+import {
+	getAuth, 
+	createUserWithEmailAndPassword,
+	GoogleAuthProvider,
+	signInWithPopup,
+} from "firebase/auth";
+import {useRouter} from "vue-router" // import router
+
+const email = ref("");
+const password = ref("");
+const router = useRouter(); // get a reference to our vue router
 
 export default {
-    name: "LoginView",
+    name: "SignupView",
     components: {
         GoogleIcon
-
-  },
+  	},
+	// setup(){
+	// 	const state = reactive({
+	// 		email: '',
+	// 		password: ''
+	// 	})
+	// },
     data (){
       return{
+		
       }
     },
     methods:{
-        loginWithGoogle(){
+	
+		signUp() {
+			const auth = getAuth() //firebase/auth
+			createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+			.then((data)=>{
+				const user = userCredential.user;
 
-        }
+				console.log(auth.currentUser)
+				console.log("Successfully registered!");
+				router.push('/feed');
+			})
+			.catch((error)=>{
+				const errorCode = error.code;
+				const errorMessage = error.message;
+
+				console.log(errorCode);
+				alert(errorMessage);
+			})
+
+		},
+
+		signInWithGoogle(){
+			const provider = new GoogleAuthProvider();
+			signInWithPopup(getAuth(), provider)
+			.then(result=>{
+				console.log(result.user)
+				router.push('/feed')
+			})
+			.catch(error=>{
+				
+			})
+		}
+
 
 
     }

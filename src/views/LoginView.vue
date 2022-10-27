@@ -49,6 +49,14 @@
 <script>
 import { toHandlers } from 'vue';
 import GoogleIcon from '../components/icons/GoogleIcon.vue';
+import {ref} from "vue";
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+import {useRouter} from "vue-router" // import router
+
+const email = ref("");
+const password = ref("");
+const router = useRouter(); // get a reference to our vue router
+
 
 export default {
     name: "LoginView",
@@ -58,13 +66,33 @@ export default {
   },
     data (){
       return{
+		email: '',
+		password: ''
       }
     },
     methods:{
-        loginWithGoogle(){
+        signUp(){
+			createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+			.then((data)=>{
+				const user = userCredential.user;
 
-        }
+				console.log(auth.currentUser)
+				console.log("Successfully registered!");
+				router.push('/feed');
+			})
+			.catch((error)=>{
+				const errorCode = error.code;
+    			const errorMessage = error.message;
 
+				console.log(errorCode);
+				alert(errorMessage);
+			})
+
+		},
+
+		signUpWithGoogle(){
+
+		}
 
     }
 

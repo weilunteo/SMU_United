@@ -1,6 +1,6 @@
 <template>
 
-    <a link="stylesheet" href="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js"></a>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/browser-scss@1.0.3/dist/browser-scss.min.js">
 
 <main class="main">
 	<div class="container">

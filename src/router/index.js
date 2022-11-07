@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import SignupView from '../views/SignupView.vue'
 import FeedView from '../views/FeedView.vue'
+import IndividualPageView from '../views/IndividualPageView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +35,11 @@ const router = createRouter({
       path: '/feed',
       name: 'feed',
       component: FeedView
+    },
+    {
+      path: '/individual',
+      name: 'individual',
+      component: IndividualPageView
     }
   ]
 })

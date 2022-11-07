@@ -1,0 +1,165 @@
+
+
+<!-- here is to paste notes that we might want to use after deleting -- jessica -->
+    <div class = "grid"> <!-- GRID -->
+        <div class = "grid-item">  <!-- GRID ITEM -->
+            <div class = "card"> <!-- CARD -->
+                <a href="https://www.nyu.edu" target="_blank"><img class="card-img" src="src/assets/img/background.png"/></a>
+                <div class="card-content"> <!-- CARD CONTENT -->
+                    <h1 class="card-header"><a href="https://www.nyu.edu" target="_blank">New York University (NYU)</a></h1>
+                    <p class= "card-rating"> 5/5 <i class="fa-solid fa-star"></i> </p>
+                    <p class="card-location"> <!-- CARD LOCATION -->
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            New York City, New York
+                    </p> <!-- END OF CARD LOCATION -->
+                    <button class ="card-btn">  <!-- CARD BUTTON -->
+                        <a href="https://www.nyu.edu" target="_blank">
+                            Find out more <span>&rarr;</span>
+                        </a>
+                    </button> <!-- END OF CARD BUTTON -->
+                </div> <!-- END OF CARD CONTENT -->
+            </div> <!-- END OF CARD -->
+        </div> <!-- END OF GRID ITEM -->
+
+        <div class = "grid-item">  <!-- GRID ITEM -->
+            <div class = "card"> <!-- CARD -->
+                <a href="https://www.nyu.edu" target="_blank"><img class="card-img" src="src/assets/img/background.png"/></a>
+                <div class="card-content"> <!-- CARD CONTENT -->
+                    <h1 class="card-header"><a href="https://www.nyu.edu" target="_blank">New York University (NYU)</a></h1>
+                    <p class= "card-rating"> 5/5 <i class="fa-solid fa-star"></i> </p>
+                    <p class="card-location"> <!-- CARD LOCATION -->
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            New York City, New York
+                    </p> <!-- END OF CARD LOCATION -->
+                    <button class ="card-btn">  <!-- CARD BUTTON -->
+                        <a href="https://www.nyu.edu" target="_blank">
+                            Find out more <span>&rarr;</span>
+                        </a>
+                    </button> <!-- END OF CARD BUTTON -->
+                </div> <!-- END OF CARD CONTENT -->
+            </div> <!-- END OF CARD -->
+        </div> <!-- END OF GRID ITEM -->
+
+        <div class = "grid-item">  <!-- GRID ITEM -->
+            <div class = "card"> <!-- CARD -->
+                <a href="https://www.nyu.edu" target="_blank"><img class="card-img" src="src/assets/img/background.png"/></a>
+                <div class="card-content"> <!-- CARD CONTENT -->
+                    <h1 class="card-header"><a href="https://www.nyu.edu" target="_blank">New York University (NYU)</a></h1>
+                    <p class= "card-rating"> 5/5 <i class="fa-solid fa-star"></i> </p>
+                    <p class="card-location"> <!-- CARD LOCATION -->
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            New York City, New York
+                    </p> <!-- END OF CARD LOCATION -->
+                    <button class ="card-btn">  <!-- CARD BUTTON -->
+                        <a href="https://www.nyu.edu" target="_blank">
+                            Find out more <span>&rarr;</span>
+                        </a>
+                    </button> <!-- END OF CARD BUTTON -->
+                </div> <!-- END OF CARD CONTENT -->
+            </div> <!-- END OF CARD -->
+        </div> <!-- END OF GRID ITEM -->
+        
+    </div> <!-- END OF GRID -->
+
+    <div class="container" >
+        <div class="row">
+            <div class="grid" > 
+                <div class = "grid-item">  <!-- GRID ITEM -->
+                    <div class = "card" > <!-- CARD -->
+                        <a href="https://www.nyu.edu" target="_blank"><img class="card-img" src="src/assets/img/background.png"/></a>
+                        <div class="card-content"> <!-- CARD CONTENT -->
+                            <h1 class="card-header"><a href="https://www.nyu.edu" target="_blank">New York University (NYU)</a></h1>
+                            <p class= "card-rating"> 5/5 <i class="fa-solid fa-star"></i> </p>
+                            <p class="card-location"> <!-- CARD LOCATION -->
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                    {{country}}
+                            </p> <!-- END OF CARD LOCATION -->
+                            <button class ="card-btn">  <!-- CARD BUTTON -->
+                                <a href="https://www.nyu.edu" target="_blank">
+                                    Find out more <span>&rarr;</span>
+                                </a>
+                            </button> <!-- END OF CARD BUTTON -->
+                        </div> <!-- END OF CARD CONTENT -->
+                    </div> <!-- END OF CARD -->
+                </div> <!-- END OF GRID ITEM -->
+            </div><!-- END OF GRID  -->
+        </div>
+    </div>
+
+<!-- INDIVIDUAL CARD CODE -->
+    <div class="col">
+        <div class="card">
+            <img class="card-img-top" 
+                    src="src/assets/img/background.png" >
+            <div class="card-body d-flex flex-column">
+                <h6 class="card-title">New York University</h6>
+                <p class="card-text">
+                    <span>
+                        Ratings: 5/5
+                    </span>
+                </p>
+                <p class="card-location"> <!-- CARD LOCATION -->
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            Singapore
+                </p> <!-- END OF CARD LOCATION -->
+                <div class="mt-auto">
+                <button class ="card-btn ">  <!-- CARD BUTTON -->
+                    <a href="https://www.nyu.edu" target="_blank">
+                        Find Out More! 
+                    </a>
+                </button> <!-- END OF CARD BUTTON -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+<!-- END OF INDIVIDUAL CARD CODE -->
+
+
+function display_winners(json_obj) {
+
+    console.log("[START] display_winners")
+
+    var winner_array = json_obj.records
+
+    var str = `
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    `
+
+    // Display winners as cards
+    for(var winner of winner_array) {
+        str += `
+                <div class="col">
+                    <div class="card">
+                        <img class="card-img-top" 
+                                src="krazyoscars/images/${winner.others.image}" 
+                                alt="${winner.bio.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${winner.bio.name}</h5>
+                            <p class="card-text">
+                                <span style="font-weight: bold">
+                                    ${winner.movie.title} (${winner.movie.year})
+                                </span>
+                                <br>
+                                <span style="font-style: italic">
+                                    ${winner.movie.description}
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        `
+    }
+
+    // Close row
+    str += `
+            </div>
+    `
+
+    // Add cards to <div id="winner_cards" class="card-columns">
+    document.getElementById("winner_cards").innerHTML = str
+
+    console.log("[END] display_winners")
+
+}

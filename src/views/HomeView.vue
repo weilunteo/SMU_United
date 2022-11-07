@@ -3,7 +3,6 @@
   <NavigationBar/>
   <HeroSection/>
   <FeatureSection/>
-  <Footer/>
   
   </template>
   
@@ -11,7 +10,6 @@
   import NavigationBar from '../components/landing-page/NavigationBar.vue'
   import HeroSection from '../components/landing-page/HeroSection.vue'
   import FeatureSection from '../components/landing-page/FeatureSection.vue';
-  import Footer from '../components/landing-page/Footer.vue';
   
   export default {
   name: "HomeView",
@@ -19,7 +17,6 @@
     NavigationBar,
     HeroSection,
     FeatureSection,
-    Footer
   },
   data (){
     return{
@@ -27,6 +24,8 @@
     }
   },
   methods:{
+
+    
   
   }
   

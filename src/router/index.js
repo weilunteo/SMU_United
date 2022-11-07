@@ -4,6 +4,11 @@ import LoginView from '../views/LoginView.vue'
 import SignupView from '../views/SignupView.vue'
 import FeedView from '../views/FeedView.vue'
 
+// dummy views
+import SignupView2 from '../views/SignupView2.vue'
+import LoginView2 from '../views/LoginView2.vue'
+
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -34,6 +39,14 @@ const router = createRouter({
       path: '/feed',
       name: 'feed',
       component: FeedView
+    },
+    {path: '/signup2',
+    name: 'signup2',
+    component: SignupView2
+    },
+    {path: '/login2',
+    name: 'login2',
+    component: LoginView2
     }
   ]
 })

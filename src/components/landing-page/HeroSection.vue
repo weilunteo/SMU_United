@@ -23,16 +23,15 @@
 
                     <div class="row mt-4">
                             <h5>
-                                <p>Want to plan for exchange but don't know where or how to start?</p>
-                                <p>Then, this platform is the one for you!</p>
+                                <p>Want to plan for exchange but don't know how to start?</p>
+                                <p>Then, this platform is the one for you.</p>
                             </h5>
                        
                     </div>
 
                     <div class="row mt-2">
-                        <span >
-                            <router-link to="/login" class="btn btn-primary px-5 mx-2">Login</router-link>
-                            <router-link to="/signup"  class="btn btn-outline-primary px-5 mx-2">Sign Up</router-link>
+                        <span>
+                            <router-link to="/signup"  id="join" class="btn btn-primary px-5 mx-2 w-75 fw-semibold d-grid gap-2">Join our community today!</router-link> 
                         </span>
                     </div>
                 
@@ -44,13 +43,13 @@
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="../../assets/img/isep.jpeg" class="d-block w-100" alt="...">
+                            <img src="../../assets/img/isep.jpeg" class="d-block w-100" height="100px">
                             </div>
                             <div class="carousel-item" data-bs-interval="10000">
-                            <img src="../../assets/img/isep2.jpeg" class="d-block w-100" alt="...">
+                            <img src="../../assets/img/isep2.jpeg" class="d-block w-100" height="100px">
                             </div>
                             <div class="carousel-item" data-bs-interval="10000" >
-                            <img src="../../assets/img/isep3.jpeg" class="d-block w-100" alt="...">
+                            <img src="../../assets/img/isep3.jpeg" class="d-block w-100" height="100px">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -122,7 +121,8 @@ export default {
 }
 
 .home{
-    background-color: rgb(191, 220, 246);
+    /* background-color: rgb(191, 220, 246); */
+    background-color: #6DAFFE;
     width: 100%;
     height: 100%;
 }
@@ -138,6 +138,10 @@ color:black;
   height: 100%;
   border-radius:25px;
   object-fit: cover;
+}
+
+#join{
+    border-radius: 18px;
 }
 
 

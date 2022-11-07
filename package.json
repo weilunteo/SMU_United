@@ -8,6 +8,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.4",
+    "@heroicons/vue": "^2.0.13",
     "@lottiefiles/vue-lottie-player": "^1.0.9",
     "firebase": "^9.12.1",
     "pinia": "^2.0.21",

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import SignupView from '../views/SignupView.vue'
 import FeedView from '../views/FeedView.vue'
+import IndividualPageView from '../views/IndividualPageView.vue'
 
 // dummy views
 import SignupView2 from '../views/SignupView2.vue'
@@ -40,13 +41,10 @@ const router = createRouter({
       name: 'feed',
       component: FeedView
     },
-    {path: '/signup2',
-    name: 'signup2',
-    component: SignupView2
-    },
-    {path: '/login2',
-    name: 'login2',
-    component: LoginView2
+    {
+      path: '/individual',
+      name: 'individual',
+      component: IndividualPageView
     }
   ]
 })

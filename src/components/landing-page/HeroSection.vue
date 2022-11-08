@@ -1,21 +1,11 @@
 <template>
 
-    <header>
-        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-        <!-- icon style link -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    </header>
-
-    <section> <!-- HTML template-->
-
-        <!-- Fav Icon -->
-
         <div class="home">
 
-            <div class="container py-3 justify-content-center">
+            <div class="container align-items-center"> 
 
-            <div class="row">
-                <div class="col">
+            <div class="row mx-auto">
+                <div class="col-lg-6 col-md-8 col-sm-12">
                     <div class="row">
                         <h1>Enhance your International Summer Exchange Programme (ISEP) with <br><span><strong>SMU United!</strong></span></h1>
                     
@@ -31,14 +21,14 @@
 
                     <div class="row mt-2">
                         <span>
-                            <router-link to="/signup"  id="join" class="btn btn-primary px-5 mx-2 w-75 fw-semibold d-grid gap-2">Join our community today!</router-link> 
+                            <router-link to="/signup"  id="join" class="btn btn-primary px-5 mb-5 mx-2 w-75 fw-semibold d-grid gap-2">Join our community today!</router-link> 
                         </span>
                     </div>
                 
                 
                 </div>
 
-                <div class="col">
+                <div class="col-lg-6 col-md-8 col-sm-12">
 
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -64,12 +54,10 @@
                 </div>
             </div>
 
-            </div>
+        </div>  
 
-        </div>
+       </div>
 
-
-    </section>
 </template>
 
 <script>
@@ -122,9 +110,9 @@ export default {
 
 .home{
     background-color: rgb(191, 220, 246);
-    /* background-color: #6DAFFE; */
+    background-color: #6DAFFE;
     width: 100%;
-    height: 100%;
+    height: 100vh ;
 }
 
 h1{

@@ -37,11 +37,7 @@
                 </div>
 
     </div>
-    
-    <!-- Footer Start -->
 
-    
-<!-- Footer End -->
     
     </template> 
     
@@ -67,7 +63,7 @@
     }
     
     </script>
-    gi
+
     <style>
     /* .container{
         display: flex;

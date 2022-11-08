@@ -5,10 +5,6 @@ import SignupView from '../views/SignupView.vue'
 import FeedView from '../views/FeedView.vue'
 import IndividualPageView from '../views/IndividualPageView.vue'
 
-// dummy views
-import SignupView2 from '../views/SignupView2.vue'
-import LoginView2 from '../views/LoginView2.vue'
-
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

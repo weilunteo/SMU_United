@@ -10,7 +10,7 @@
 
         <!-- Fav Icon -->
 
-        <div class="home" style="width:fit-content">
+        <div class="home">
 
             <div class="container py-3 justify-content-center">
 

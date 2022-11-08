@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import SignupView from '../views/SignupView.vue'
 import FeedView from '../views/FeedView.vue'
+import IndividualPageView from '../views/IndividualPageView.vue'
 
 
 const router = createRouter({
@@ -36,6 +37,11 @@ const router = createRouter({
       name: 'feed',
       component: FeedView
     },
+    {
+      path: '/individual',
+      name: 'individual',
+      component: IndividualPageView
+    }
   ]
 })
 

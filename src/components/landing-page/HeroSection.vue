@@ -10,9 +10,9 @@
 
         <!-- Fav Icon -->
 
-        <div class="home">
+        <div class="home" style="width:fit-content">
 
-            <div class="container py-5 justify-content-center">
+            <div class="container py-3 justify-content-center">
 
             <div class="row">
                 <div class="col">
@@ -121,8 +121,8 @@ export default {
 }
 
 .home{
-    /* background-color: rgb(191, 220, 246); */
-    background-color: #6DAFFE;
+    background-color: rgb(191, 220, 246);
+    /* background-color: #6DAFFE; */
     width: 100%;
     height: 100%;
 }
@@ -134,10 +134,17 @@ color:black;
 
 }
 
-.carousel-item {
-  height: 100%;
-  border-radius:25px;
-  object-fit: cover;
+.carousel .carousel-item {
+  height: 400px;
+  width: 600px;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
 }
 
 #join{

@@ -1,7 +1,7 @@
 <template>
 
     <div class="mx-5 mb-5">
-        <h1 class="text-center fw-semibold mt-5 py-5">
+        <h1 class="text-center fw-semibold mt-5 py-5" style="color:#031b4e">
           4 Unique Features. We Got You.
         </h1>
                 <div class="row mx-auto text-center justify-content-center">

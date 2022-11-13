@@ -6,8 +6,7 @@
   <StudentStatistics/>
   <FeatureSection/>
   <Testimonial/>
-  
-  </template>
+ </template>
   
   <script> /*Javascript */
   import NavigationBar from '../components/landing-page/NavigationBar.vue'

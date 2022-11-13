@@ -22,7 +22,7 @@
 						<input v-model="verifyPassword" type="password" name="verifyPassword" id="verifyPassword" class="input-field" placeholder="Enter Password Again" required>
 					</div>  -->
 					<div class="mb-4">
-						<!-- <input type="checkbox"> I consent for my personal data to be retrieved by SMU United.  -->
+						<input type="checkbox"> I consent for my personal data to be retrieved by SMU United. 
 						<input  v-on:click="signUpWithEmail()" type="submit" name="submit" class="input-submit mt-3 w-100 d-flex align-items-center justify-content-center" value="Create Account">
 					</div>
 				</div>

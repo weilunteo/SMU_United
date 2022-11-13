@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="hello">
+    
+</div>
+</body>
+<script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js';
+    import { getDatabase, ref, child, onValue, get } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCRupTz-7gGj0j_th9vfpEwPR7cb5U-Q0o",
+        authDomain: "smuexchangeschoolsdb.firebaseapp.com",
+        databaseURL: "https://smuexchangeschoolsdb-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "smuexchangeschoolsdb",
+        storageBucket: "smuexchangeschoolsdb.appspot.com",
+        messagingSenderId: "444723552496",
+        appId: "1:444723552496:web:b34cc45c31d545a609a235"
+    };
+
+    // Initialize Firebase  
+    const app = initializeApp(firebaseConfig);
+
+    const db = getDatabase();
+    //-----Getting data-----//
+
+    var list = [];
+    const dbref = ref(db);
+
+    get(child(dbref, 'new zealand'))
+        .then((snapshot) => {
+            var currentData = [];
+            var currentData = snapshot.val();
+            //console.log(list);
+
+            for (const [school, details] of Object.entries(currentData)) {
+                list.push([school, details]);
+                console.log(school)
+                console.log(details)
+            }
+            console.log(list);
+            //vue app. -> computed -> loop thru all the values ->
+            //e.g. school: list.school, coordinates: list.coordinates
+
+        })
+        .catch(() => {
+            //error
+        })
+        
+</script>
+
+</html>

@@ -146,7 +146,6 @@
 import { increment, collection, query, where, getDocs, doc, getDoc, setDoc, getFirestore } from '@firebase/firestore';
 import Comments from '../components/community-page/Comments.vue'
 import HeaderSidebar from '../components/feed-page/HeaderSidebar.vue';
-import Post from '../components/community-page/Post.vue'
 import db from "../firebase/firebaseInit";
 import firebase from 'firebase/compat/app';
 import { getEventListeners } from 'events';
@@ -156,7 +155,6 @@ import { getEventListeners } from 'events';
     components: {
       Comments,
       HeaderSidebar,
-      Post,
     },
     data() {
       return {

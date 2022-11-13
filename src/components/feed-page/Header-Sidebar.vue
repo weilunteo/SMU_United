@@ -1,42 +1,22 @@
 <template>
+
   <nav id="top-nav"> <!-- TOP NAVIGATION BAR -->
       <div class="top-container"> <!-- TOP CONTAINER -->
           
-    
+          
+      
           <div class="top-header"> <!-- SEARCH BAR -->
-            <div class="top-header-links"><a href="http://localhost:5173/feed">HOME</a></div>
-            <div class="top-header-links"><a href="http://localhost:5173/recommendation">RECOMMENDATION</a></div>
-            <div class="top-header-links"><a href="http://localhost:5173/community-test">YOUR COMMUNITY</a></div>
+            <div class="top-header-links"><a href="#">HOME</a></div>
+            <div class="top-header-links"><a href="#">YOUR MODULES</a></div>
+            <div class="top-header-links"><a href="#">RECOMMENDATION</a></div>
+            <div class="top-header-links"><a href="#">YOUR COMMUNITY</a></div>
           </div> <!-- END OF SEARCH BAR -->
+          
           <div> <!-- HI, NAME -->
-            <div class="dropdown">
-                <img id = "avatar" src='https://ui-avatars.com/api/?name=John+Doe&background=random'>
-              <ul class="dropdown-menu">
-                <li><router-link to="/" >Sign Out</router-link></li>
-              </ul>
-            </div>
+              <p class="hi-text">Hi, Jessica!</p>
           </div> <!-- END OF HI, NAME -->
       </div> <!-- END OF TOP CONTAINER -->
     </nav><!-- END OF TOP NAVIGATION BAR -->
-
-    <!-- <div class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 
   
      
@@ -180,15 +160,10 @@
 
           hamburgerSelector.classList.toggle('is-active');
           mobile_menu.classList.toggle('is-active')
-        },
-        
-        signout(){
-          const signout = document.querySelector('#signout');
-          signout.classList.toggle('is-active')
         }
+    }
   
   
-      }
     }
     
     </script>
@@ -196,14 +171,11 @@
     <style>
 
     :root {
+
       --primary: #0069fc;
       --light: #EEEEEE;
       --dark: #0069fc;
       --shadow: lightgrey;
-    }
-
-    #popup-signout .is-active {
-      background-color: white;
     }
 
 
@@ -217,12 +189,6 @@
       justify-content: space-between;
       vertical-align: middle;
     }
-
-    @media only screen and (max-width: 768px) {
-      .top-header-links a{
-        font-size: 10px;
-      }
-}
 
 
     #top-nav {
@@ -238,8 +204,6 @@
       height: 100px;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
-
-   
 
     .hi-text{
       color: #FFF;
@@ -277,10 +241,4 @@
       color: black;
     }
 
-    #avatar {
-      border-radius: 50% ;
-    }
-
-    
-    
     </style>

@@ -1,4 +1,4 @@
-# SMU United
+# The Travelling Student
 
 https://is216-g7t4-smu-united.netlify.app/
 

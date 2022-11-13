@@ -4,9 +4,9 @@
           
     
           <div class="top-header"> <!-- SEARCH BAR -->
-            <div class="top-header-links"><a href="http://localhost:5173/feed">HOME</a></div>
-            <div class="top-header-links"><a href="http://localhost:5173/recommendation">RECOMMENDATION</a></div>
-            <div class="top-header-links"><a href="http://localhost:5173/community-test">YOUR COMMUNITY</a></div>
+            <div class="top-header-links"><router-link to="/feed">HOME</router-link></div>
+            <div class="top-header-links"><router-link to="/recommendation">RECOMMENDATION</router-link></div>
+            <div class="top-header-links"><router-link to="/community-test">YOUR COMMUNITY</router-link></div>
           </div> <!-- END OF SEARCH BAR -->
           <div> <!-- HI, NAME -->
             <div class="dropdown">

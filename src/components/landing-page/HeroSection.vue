@@ -105,7 +105,7 @@
     h1{
     font-size: 30px ;
     font-weight: normal;
-    color:black;
+    color:white;
     
     }
 /*     

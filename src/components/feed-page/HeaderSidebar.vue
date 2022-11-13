@@ -1,41 +1,24 @@
 <template>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <nav id="top-nav"> <!-- TOP NAVIGATION BAR -->
-        <div class="top-container"> <!-- TOP CONTAINER -->
-            
-            <button class="hamburger" style="padding-top: 20px;" v-on:click="hamburgerClick()"> <!-- HAMBURGER ICON -->
-                <span></span>
-                <span></span>
-                <span></span>
-            </button> <!-- END OF HAMBURGER ICON -->
-        
-            <div class="search-wrapper"> <!-- SEARCH BAR -->
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Select a Country!
-                </button>
-                <ul class="dropdown-menu">
-                  <li v-for="country of country_name" value={{country}}> {{country}} </li>
-                </ul>
-              </div>
-            </div> <!-- END OF SEARCH BAR -->
-            
-            <div> <!-- HI, NAME -->
-                <p class="hi-text">Hi, Jessica!</p>
-            </div> <!-- END OF HI, NAME -->
+  <nav id="top-nav"> <!-- TOP NAVIGATION BAR -->
+      <div class="top-container"> <!-- TOP CONTAINER -->
+          
+          
       
-        </div> <!-- END OF TOP CONTAINER -->
-    </nav> <!-- END OF TOP NAVIGATION BAR -->
+          <div class="top-header"> <!-- SEARCH BAR -->
+            <div class="top-header-links"><a href="#">HOME</a></div>
+            <div class="top-header-links"><a href="#">YOUR MODULES</a></div>
+            <div class="top-header-links"><a href="#">RECOMMENDATION</a></div>
+            <div class="top-header-links"><a href="#">YOUR COMMUNITY</a></div>
+          </div> <!-- END OF SEARCH BAR -->
+          
+          <div> <!-- HI, NAME -->
+              <p class="hi-text">Hi, Jessica!</p>
+          </div> <!-- END OF HI, NAME -->
+      </div> <!-- END OF TOP CONTAINER -->
+    </nav><!-- END OF TOP NAVIGATION BAR -->
 
-<nav class="mobile-nav"> <!-- COLLAPSIBLE SIDE BAR -->
-    <i class="fa-duotone fa-house-blank"></i><a href="#">HOME</a>
-    <a href="#">YOUR MODULES</a>
-    <a href="#">RECOMMENDATION</a>
-    <a href="#">YOUR COMMUNITY</a>
-</nav> <!-- END OF COLLAPSIBLE SIDE BAR -->
+
+
 
   
      
@@ -47,7 +30,7 @@
     import { toHandlers } from 'vue';
     
     export default {
-      name: "Header-Sidebar",
+      name: "HeaderSidebar",
       components: {
     
     },
@@ -190,9 +173,9 @@
     <style>
 
     :root {
-      --primary: #6DAFFE;
+      --primary: #0069fc;
       --light: #EEEEEE;
-      --dark: #6DAFFE;
+      --dark: #0069fc;
       --shadow: lightgrey;
     }
 
@@ -215,82 +198,15 @@
       left: 0;
       right: 0;
       z-index: 99;
-      background-color: var(--dark);
+      background-color: #0069fc;
       padding: 16px 32px;
       border-bottom: 3px solid var(--primary);
       margin-bottom: 20px;
       height: 100px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 
-    .hamburger {
-      display: block;
-      position: relative;
-      z-index: 1;
-
-      user-select: none;
-
-      appearance: none;
-      border: none;
-      outline: none;
-      background: none;
-      cursor: pointer;
-
-    }
-
-    .hamburger {
-      display: block;
-      position: relative;
-      z-index: 1;
-
-      user-select: none;
-
-      appearance: none;
-      border: none;
-      outline: none;
-      background: none;
-      cursor: pointer;
-
-      margin-right: 15px;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 33px;
-      height: 4px;
-      margin-bottom: 5px;
-      position: relative;
-
-      background-color: var(--light);
-      border-radius: 6px;
-      z-index: 1;
-
-      transform-origin: 0 0;
-      
-      transition: 0.4s;
-    }
-
-    .hamburger:hover span:nth-child(2) {
-      transform: translateX(10px);
-      background-color: var(--primary)
-    }
-
-    .hamburger.is-active span:nth-child(1){
-      transform: translate(0px, -2px) rotate(45deg);
-    }
-
-    .hamburger.is-active span:nth-child(2){
-      opacity: 0;
-      transform: translateX(15px);
-    }
-
-    .hamburger.is-active span:nth-child(3){
-      transform: translate(-3px, 3px) rotate(-45deg);
-    }
-
-    .hamburger.is-active:hover span {
-      background-color: var(--primary)
-    }
-
+   
 
     .hi-text{
       color: #FFF;
@@ -306,64 +222,28 @@
       margin-top: 12px;
     }
 
-    .search-wrapper {
+    .top-header {
+      display: flex;
+    }
+
+    .top-header-links {
+      margin-right: 20px;
       margin-top: 20px;
+      margin-left: 0px;
     }
 
-    #search-input {
-      margin: 0 0.5rem 0 0.5rem;
-      width: 100%;
-      border: none;
-      outline: none;
-      background-color: var(--light);
-    }
-
-    ::placeholder {
-      color: var(--dark);
-    }
-
-    .mobile-nav {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: -300px;
-      width: 100%;
-      max-width: 300px;
-      padding-top: 120px;
-      height: 100%;
-      z-index: 98;
-      background-color: var(--dark);
-      transition: 0.4s;
-    }
-
-    .mobile-nav.is-active {
-      left: 0;
-      position: fixed;
-    }
-
-
-    .mobile-nav a {
-      display: block;
-      width: 100%;
-      max-width: 250px;
-      margin: 0 auto 18px;
-      text-align: left;
-      padding: 10px 16px;
-      background-color: var(--dark);
+    .top-header-links a {
+      text-decoration: none;
+      font-size: 18px;
 
       color: var(--light);
-      text-decoration: none;
-      transition: 0.4s;
-
-      border-radius: 8px;
-      font-family:  sans-serif;
       font-weight: bold;
     }
 
-    .mobile-nav a:hover{
-      background-color: var(--light);
-      color: var(--dark)
+    .top-header-links a:hover, .top-header-links a:active{
+      color: black;
     }
 
+    
     
     </style>

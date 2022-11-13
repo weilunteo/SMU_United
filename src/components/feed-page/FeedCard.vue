@@ -2,10 +2,51 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 feed-style" >
+    <!-- <div class="row"><button id="sort-button" v-on:click="sort_function()">Sort by Newest</button></div> -->
+    <div class="container-sm">
+    <div class="row d-inline">
+        <div class="input-group">
+            <div class="form-outline">
+                <input id="search-input" type="search" class="form-control" v-model="university_input" placeholder="Search For University"/>
+            </div>
+            <button id="search-button" type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="row d-flex flex-wrap align-items-center filter-component">
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <div class="dropdown">
+                    <label for="FilterCountry">Filter By Country</label>
+                    <select name="FilterCountry" id="FilterCountry" v-model="country_input">
+                        <option v-for="c of countries" v-bind:value="c" >{{c}}</option>
+                    </select>
+                    </div>           
+            </li>
+            
+            <li class="list-inline-item">
+                <div class="dropdown">
+                    <label for="FilterGPA">Filter By GPA</label>
+                    <select name="FilterGPA" id="FilterGPA">
+                        <option v-for="gpa of GPA_values">{{gpa}}</option>
+                    </select>
+                    </div>   
+                
+            </li>
+        </ul>
+        
+        
+    </div>
+
+
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4 feed-style" >
+
 <div v-for="i in records.australia">
         <div class="col">
-            <div class="card">
+            <div class="card" style="width: 280px">
                     <img class="img" 
                             src="../../assets/img/background.png"/>
                 <div class="card-body d-flex flex-column">
@@ -35,7 +76,15 @@
         
 
     </div>
+</div>
 
+<h3>{{university_input}}</h3>
+
+<button v-on:click="test_function()">Click to generate counties</button>
+
+<h3>{{countries}}</h3>
+
+<h3>user input {{country_input}}</h3>
   
      
 </template> 
@@ -43,6 +92,27 @@
 <script>
 
     import { toHandlers } from 'vue';
+     import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js';
+    import { getDatabase, ref, child, onValue, get } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCRupTz-7gGj0j_th9vfpEwPR7cb5U-Q0o",
+        authDomain: "smuexchangeschoolsdb.firebaseapp.com",
+        databaseURL: "https://smuexchangeschoolsdb-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "smuexchangeschoolsdb",
+        storageBucket: "smuexchangeschoolsdb.appspot.com",
+        messagingSenderId: "444723552496",
+        appId: "1:444723552496:web:b34cc45c31d545a609a235"
+    };
+
+    const app = initializeApp(firebaseConfig);
+
+    const db = getDatabase();
+   
+
     
     export default {
       name: "FeedCard",
@@ -51,8 +121,10 @@
     },
     data() {
         return {
-
-            test: [0,1,2,3],
+            university_input: "",
+            country_input: "",
+            GPA_values: [1.0, 2.0, 3.0, 4.0],
+            countries: [],
             records : {
             "usa": [
                 {
@@ -10961,6 +11033,36 @@
         }
     },
       methods:{
+       test_function(){
+        var list = [];
+        const dbref = ref(db);
+        get(dbref)
+        .then((snapshot) => {
+            var currentData = [];
+            var currentData = snapshot.val();
+
+            for (const [school, details] of Object.entries(currentData)) {
+                list.push([school, details]);
+            }
+            console.log(list);
+
+            for(var country of list){
+                this.countries.push(String(country[0]))
+                // this.countries.push(country[0])
+            }
+            console.log(this.countries)
+
+            // console.log(list[1][0]);
+            // console.log(list[0][0]);
+            //vue app. -> computed -> loop thru all the values ->
+            //e.g. school: list.school, coordinates: list.coordinates
+
+        })
+
+        .catch(() => {
+            //error
+        });
+       }
        
     }
   
@@ -10973,16 +11075,32 @@
 
 :root {
       --light: #EEEEEE;
-      --dark: #6DAFFE;
+      --dark: #031b4e;
       --shadow: lightgrey;
 }
 
+*{
+    color: #031b4e;
+}
+
+#search-button{
+    height: 33px;
+}
+#search-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 33px;
+    color: #031b4e
+}
+
+.card{
+    width: 380px
+}
+
 .feed-style{
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    padding-top: 150px;
     padding-left: auto;
 }
 
@@ -10991,7 +11109,7 @@
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    height: 440px;
+    height: 400px;
 }
 
 .img {
@@ -11001,7 +11119,6 @@
 }
 
 .card-body{
-    height: 20%;
     vertical-align: middle;
     margin-top: auto;
     margin-bottom: auto;
@@ -11010,7 +11127,7 @@
 .card-title{
     margin-bottom: 3px;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .card-location {
@@ -11027,7 +11144,7 @@
 
 .card-btn{
     font-size: 12px;
-    background-color: #6DAFFE;
+    background-color: #0069fc;
     width: 100%;
     padding-left: auto;
     padding-right: auto;
@@ -11041,6 +11158,25 @@
 .card-btn a {
     color: white;
     font-weight: bold;
+}
+
+.filter-component {
+    margin: 20px;
+}
+
+.btn-style{
+    background-color: #0069fc;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    color: white;
+    font-weight:600;
+    font-size: 14px;
+}
+
+.input-group {
+    padding-top: 50px;
+    margin: 0 auto;
 }
 
 

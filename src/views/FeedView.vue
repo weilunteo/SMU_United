@@ -1,19 +1,19 @@
 <template>
 
-    <Header/>
+    <HeaderSidebar/>
     <FeedCard/>
     
 </template>
     
     <script> /*Javascript */
     import { toHandlers } from 'vue';
-    import Header from '../components/feed-page/Header-Sidebar.vue';
+    import HeaderSidebar from '../components/feed-page/HeaderSidebar.vue';
     import FeedCard from '../components/feed-page/FeedCard.vue';
     
     export default {
     name: "FeedView",
     components: {
-      Header,
+      HeaderSidebar,
       FeedCard
     },
     data (){

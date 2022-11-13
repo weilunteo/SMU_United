@@ -4,8 +4,7 @@ import LoginView from '../views/LoginView.vue'
 import SignupView from '../views/SignupView.vue'
 import FeedView from '../views/FeedView.vue'
 import IndividualPageView from '../views/IndividualPageView.vue'
-
-
+import Recommendation from '../views/Recommendation.vue' 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -41,7 +40,13 @@ const router = createRouter({
       path: '/individual',
       name: 'individual',
       component: IndividualPageView
-    }
+    },
+    {
+      path: '/recommendation',
+      name: 'recommendation',
+      component: Recommendation
+    },
+
   ]
 })
 

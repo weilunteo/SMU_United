@@ -1,28 +1,28 @@
 <template>
-    <div class="container-fluid container-sm" style="width: 85%; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+    <div class="container-fluid container-sm" style="width: 90%; height: auto; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
         <div class="row title-box">
             <!-- <div class="col title-box" v-on:mouseover="hover_function()"> -->
 
             <!-- UNI Name -->
-            <div class="name" style="padding-left: 0px; padding-right: 0px">University of London</div>
+            <div class="name" style="padding-left: 0px; padding-right: 0px">{{uni_name}}</div>
 
             <!-- Uni Reviews & Info -->
             <div class="review-class" style="padding-left: 0px; padding-right: 0px">
-                <span>&#9733 &#9733 &#9733 &#9733 4.5| <a href="http://googlemaps.com">Location</a></span>
+                <span>&#9733 &#9733 &#9733 &#9733 &#9733 5.0</span>
             </div>
         </div>
 
-        <div class="row container">
-            <div class="row col-md-8" style="padding: 0px;">
+        <div class="row"> 
+            <div class="row col-md-8" >
                 <!-- carousel here -->
                 <div id="carouselExampleControls" class="carousel slide box" data-bs-ride="carousel">
                     <div class="carousel-inner">
 
                         <div class="carousel-item active">
-                            <img src="../../assets/img/background2.png" class="d-block w-100" alt="...">
+                            <img :src="schoolImageSrc" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="../../assets/img/background2.png" class="d-block w-100" alt="...">
+                            <img src="https://teanabroad.org/wp-content/uploads/2015/12/Bond-Media-1-1.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="../../assets/img/background2.png" class="d-block w-100" alt="...">
@@ -42,14 +42,9 @@
             </div>
             <div class="col-md-4 description-col" style="margin-left: 20px;">
                 <div class="description-title">Description</div>
-                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ipsum, iste
-                    suscipit a, ut enim officiis saepe veniam doloremque illo itaque tempore reprehenderit. Omnis odit
-                    debitis expedita corrupti nobis asperiores?</div>
+                <div class="description">{{description}}</div>
                 <div class="round-box">
                     <div class="text">Min GPA: 3.0</div>
-                    <div class="text">Accomodation: Yes</div>
-                    <div class="text">Visa: Yes</div>
-                    <div class="text">Vacancies: 30</div>
                 </div>
 
             </div>
@@ -58,7 +53,6 @@
 
     </div>
 
-    <h1>hello{{test_function()}} {{temp}}</h1>
 
 
 </template>
@@ -96,9 +90,11 @@
     },
     data() {
         return {
-            SchoolName: "University Of London",
-            schoolImageSrc: "../../assets/img/background2.png",
-            temp: ''
+            uni_name: "Australian National University",
+            schoolImageSrc: "https://img.emg-services.net/institutes/institute29688/anu-header.jpg",
+            description: "Both ANU and the University of Melbourne place firmly in the top 100, ranking joint 27th and 37th in the world. ANU is regarded as one of the world's leading universities, and is ranked as the number one university in Australia and the Southern Hemisphere by the 2022 QS World University Rankings and second in Australia in the Times Higher Education rankings.",
+            temp: '',
+            
         }
     },
     methods: {

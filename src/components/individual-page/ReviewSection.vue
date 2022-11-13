@@ -101,18 +101,18 @@
         return {
             temp_review: [
                 {
-                    title: "Good Community",
+                    title: "Rewarding experience",
                     rate: "5",
                     date: "20 Aug 2020",
-                    name: "Jessica Fiore",
-                    content: "If men were rational in their conduct, that is to say, if they acted in the way most likely to bring about the ends that they deliberately desire, intelligence would be enough to make the world almost a paradise. In the main, what is in the long run advantageous to one man is also advantageous to another. But men are actuated by passions which distort their view; feeling an impulse to injure others, they persuade themselves that it is to their interest to do so. They will not, therefore, act in the way which is in fact to their own interest unless they are actuated by generous impulses which make them indifferent to their own interest. "
+                    name: "Jessica",
+                    content: "It was such a great experience to be part of this university! I have really learnt a lot of things from the exchange. Highly recommended!"
                 },                
                 {
-                    title: "Title 2",
-                    rate: "4",
-                    date: "insert date",
-                    name: "name",
-                    content: "content 2"
+                    title: "Fun",
+                    rate: "5",
+                    date: "30 June 2021",
+                    name: "Joel",
+                    content: "I have enjoyed my time here, it was definitely worth it to pay Australia a visit aye. I have made lifelong friends and deepen my understanding of the culture"
                 }
             ]
         }
@@ -150,6 +150,11 @@
 <style>
 *{
   color: #031b4e
+}
+
+.card-text{
+  font-size: 16px;
+  font-family:"SF Pro Display", sans-serif;
 }
 
 .sort-button-div{

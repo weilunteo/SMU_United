@@ -18,14 +18,7 @@
 <div class="row">
     <div class="col-xl-6" v-for="mod in module_list1">
     <div class="indiv-module-list-div">   
-        <svg v-on:click="do_function()" class="bookmark" id="bookmark" fill="#C8DFFF99" width="40" height="55" viewBox="0 0 48 61">
-            <path d="M 0 4C 0 1.79086 1.79086 0 4 0L 24 0C 24 0 24 0 24 0L 44 0C 46.2091 0 48 1.79086 48 4L 48 56.5259C 48 59.7207 44.4394 61.6263 41.7812 59.8541L 26.2188 49.4792C 24.8752 48.5835 23.1248 48.5835 21.7812 49.4792L 6.2188 59.8541C 3.56058 61.6263 0 59.7207 0 56.5259L 0 4Z" />
-        </svg>    
-        <span class="indiv-module-list-span">{{mod}}</span></div>
-    </div>
-    <div class="col-xl-6" v-for="mod in module_list2">
-    <div class="indiv-module-list-div">   
-        <svg v-on:click="do_function()" class="bookmark" id="bookmark" fill="#C8DFFF99" width="40" height="55" viewBox="0 0 48 61">
+        <svg v-on:click="do_function()" class="bookmark" :id="mod" fill="#C8DFFF99" width="40" height="55" viewBox="0 0 48 61">
             <path d="M 0 4C 0 1.79086 1.79086 0 4 0L 24 0C 24 0 24 0 24 0L 44 0C 46.2091 0 48 1.79086 48 4L 48 56.5259C 48 59.7207 44.4394 61.6263 41.7812 59.8541L 26.2188 49.4792C 24.8752 48.5835 23.1248 48.5835 21.7812 49.4792L 6.2188 59.8541C 3.56058 61.6263 0 59.7207 0 56.5259L 0 4Z" />
         </svg>    
         <span class="indiv-module-list-span">{{mod}}</span></div>
@@ -33,66 +26,6 @@
 </div>
 
 
-
-
-    
-
-<!-- <div class="row">
-        <div class="row">
-            <div class="col">
-                <div class="box text-start rounded-pill">
-                    <strong>IS110</strong>
-                    <i class="fa-solid fa-circle-info"></i>
-                    <i id="IS110" class="fa-regular fa-bookmark icon"></i>
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-        </div>
-        <br>
-
-        <div class="row">
-            <div class="col">
-                <div class="box text-start rounded-pill">
-                    <strong>IS111</strong>
-                    <i class="fa-solid fa-circle-info"></i>
-                    <i id="IS11" class="fa-regular fa-bookmark icon"></i>
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <div class="box text-start rounded-pill">
-                    <strong>IS112</strong>
-                    <i class="fa-solid fa-circle-info"></i>
-                    <i id="IS112" class="fa-regular fa-bookmark icon"></i>
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <div class="box text-start rounded-pill">
-                    <strong>IS113</strong>
-                    <i class="fa-solid fa-circle-info"></i>
-                    <i id="IS113" class="fa-regular fa-bookmark icon"></i>
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-        </div>
-        <br>
-        
-</div> -->
 </div>
 
 </template>
@@ -109,10 +42,8 @@ export default {
 data() {
     return {
         module_list1: 
-        ["Digital Business: Technology and Transformation", "Web Application Design", "Introduction to Programming", "Management Communication", "Mandarin", "Business Process and Analysis"],
-        module_list2: 
-        ["Digital Business: Technology and Transformation", "Web Application Design", "Introduction to Programming", "Management Communication", "Mandarin", "Business Process and Analysis"],
-        
+        ["Advanced Algorithm", "Advertising", "Algorithms", "Advanced Derivatives Pricing", "Asia and the Pacific in Motion", "Business and Economic Forecasting"],
+                
         bookmarked: []
     }
 },

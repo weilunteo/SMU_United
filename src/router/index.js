@@ -35,12 +35,14 @@ const router = createRouter({
     {
       path: '/feed',
       name: 'feed',
-      component: FeedView
+      component: FeedView,
+      props: true
     },
     {
       path: '/individual',
       name: 'individual',
-      component: IndividualPageView
+      component: IndividualPageView,
+      props: true
     }
   ]
 })

@@ -45,11 +45,6 @@ const router = createRouter({
       component: IndividualPageView
     },
     {
-      path: '/community',
-      name: 'community',
-      component: CommunityView
-    },
-    {
       path: '/community-test',
       name: 'community-test',
       component: CommunityTest

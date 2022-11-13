@@ -5,6 +5,10 @@ import SignupView from '../views/SignupView.vue'
 import FeedView from '../views/FeedView.vue'
 import IndividualPageView from '../views/IndividualPageView.vue'
 import Recommendation from '../views/Recommendation.vue' 
+import CommunityTest from '../views/CommunityTest.vue'
+import Test from '../views/Test.vue'
+
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -34,19 +38,30 @@ const router = createRouter({
     {
       path: '/feed',
       name: 'feed',
-      component: FeedView
+      component: FeedView,
+      props: true
     },
     {
       path: '/individual',
       name: 'individual',
-      component: IndividualPageView
+      component: IndividualPageView,
+      props: true
     },
     {
       path: '/recommendation',
       name: 'recommendation',
       component: Recommendation
     },
-
+    {
+      path: '/community-test',
+      name: 'community-test',
+      component: CommunityTest
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test
+    },
   ]
 })
 

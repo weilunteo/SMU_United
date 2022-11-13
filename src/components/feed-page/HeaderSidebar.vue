@@ -1,5 +1,4 @@
 <template>
-<tempate>
 
   <nav id="top-nav"> <!-- TOP NAVIGATION BAR -->
       <div class="top-container"> <!-- TOP CONTAINER -->

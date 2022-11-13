@@ -35,8 +35,9 @@
                     <p>Get a list of nearby attractions, food and accommodation near the school of your choice with our Google API.</p>
                 </div>
                 </div>
-            
+
     </div>
+
     
     </template> 
     
@@ -62,7 +63,7 @@
     }
     
     </script>
-    gi
+
     <style>
     /* .container{
         display: flex;
@@ -72,6 +73,7 @@
     
     .home{
         background-color: rgb(191, 220, 246);
+        /* background-color: #6DAFFE; */
         width: 100%;
         height: 100%;
     }

@@ -48,7 +48,7 @@
         <div class="col">
             <div class="card" style="width: 280px">
                     <img class="img" 
-                            src="src/assets/img/background.png"/>
+                            src="../../assets/img/background.png"/>
                 <div class="card-body d-flex flex-column">
                     <h6 class="card-title">{{i.school}}</h6>
                     <p class="card-text">

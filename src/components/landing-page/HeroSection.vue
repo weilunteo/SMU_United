@@ -2,7 +2,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600&family=Inter" rel="stylesheet">
     <div class="px-4 mb-4 text-center hero-image">
         <img class="d-flex mx-auto logo" src="../../assets/img/logo.png" alt="">
-        <h1 class="display-5 fw-bold title py-3">The Travelling Student</h1>
+        <h1 class="display-5 fw-bold title py-3" style="color:white">The Travelling Student</h1>
         <div class="col-lg-6 mx-auto mb-5">
           <p class="lead mb-5">Your One Stop Platform for all things Exchange</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mx-auto">
@@ -105,7 +105,7 @@
     h1{
     font-size: 30px ;
     font-weight: normal;
-    color:black;
+    color:white;
     
     }
 /*     

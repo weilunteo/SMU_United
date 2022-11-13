@@ -2,8 +2,7 @@
   <nav id="top-nav"> <!-- TOP NAVIGATION BAR -->
       <div class="top-container"> <!-- TOP CONTAINER -->
           
-          
-      
+    
           <div class="top-header"> <!-- SEARCH BAR -->
             <div class="top-header-links"><a href="http://localhost:5173/feed">HOME</a></div>
             <div class="top-header-links"><a href="http://localhost:5173/recommendation">RECOMMENDATION</a></div>
@@ -37,8 +36,6 @@
     </div>
   </div>
 </div> -->
-
-
 
 
   

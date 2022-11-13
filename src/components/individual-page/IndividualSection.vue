@@ -97,7 +97,7 @@
     data() {
         return {
             SchoolName: "University Of London",
-            schoolImageSrc: "src/assets/img/background2.png",
+            schoolImageSrc: "../../assets/img/background2.png",
             temp: ''
         }
     },

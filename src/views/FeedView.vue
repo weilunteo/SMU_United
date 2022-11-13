@@ -7,7 +7,7 @@
     
     <script> /*Javascript */
     import { toHandlers } from 'vue';
-    import Header from '../components/feed-page/Header-Sidebar.vue';
+    import Header from '../components/feed-page/HeaderSidebar.vue';
     import FeedCard from '../components/feed-page/FeedCard.vue';
     
     export default {

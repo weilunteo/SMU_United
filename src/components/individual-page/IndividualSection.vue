@@ -18,13 +18,13 @@
                 <div id="carouselExampleControls" class="carousel slide box" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="src/assets/img/background2.png" class="d-block w-100" alt="...">
+                            <img src="../../assets/img/background2.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="src/assets/img/background3.png" class="d-block w-100" alt="...">
+                            <img src="../../assets/img/background2.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="src/assets/img/isep.jpeg" class="d-block w-100" alt="...">
+                            <img src="../../assets/img/background2.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"

@@ -2,8 +2,7 @@
   <nav id="top-nav"> <!-- TOP NAVIGATION BAR -->
       <div class="top-container"> <!-- TOP CONTAINER -->
           
-          
-      
+    
           <div class="top-header"> <!-- SEARCH BAR -->
             <div class="top-header-links"><a href="#">HOME</a></div>
             <div class="top-header-links"><a href="#">YOUR MODULES</a></div>
@@ -16,8 +15,6 @@
           </div> <!-- END OF HI, NAME -->
       </div> <!-- END OF TOP CONTAINER -->
     </nav><!-- END OF TOP NAVIGATION BAR -->
-
-
 
 
   

@@ -3,7 +3,7 @@
     <div id="test">
 
         <!-- CREATE POSTS -->
-        <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center px-5">
+        <div class="container d-flex flex-wrap justify-content-center align-items-center px-5">
         <div class="create row">
                 <div class="col-lg-12">
                 <div class="tab-content null" id="pills-tabContent-2">

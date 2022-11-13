@@ -3,6 +3,7 @@
   <NavigationBar/>
   <HeroSection/>
   <FeatureSection/>
+  <!-- <a href="../src/gmaps3.html">Click me!</a> -->
   
   </template>
   

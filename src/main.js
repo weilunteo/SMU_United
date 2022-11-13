@@ -8,6 +8,8 @@ import gAuthPlugin from 'vue3-google-oauth2'
 import './assets/main.css'
 // import { initializeApp } from "firebase/app";
 
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyBmtn0NEAZ5Mg-iQfl1K9BIdR4Dyq39OMk",
   authDomain: "is216-363607.firebaseapp.com",
@@ -36,6 +38,7 @@ app.use(gAuthPlugin, {
     scope: 'email',
     prompt: 'consent',
 })
+
 
 app.mount('#app')
 

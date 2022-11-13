@@ -4,12 +4,12 @@
 
         <!-- CREATE POSTS -->
         <div class="container d-flex flex-wrap justify-content-center align-items-center px-5">
-        <div class="create row">
-                <div class="col-lg-12">
+        <div class="create row w-100">
+                <div class="col-lg-12 mt-5 ">
                 <div class="tab-content null" id="pills-tabContent-2">
                     <div class="tab-pane fade show active" id="profile-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
         
-                            <div class="create-card card w-100 h-150" id="post-modal-data">
+                            <div class="create-card card w-100 h-50" id="post-modal-data">
                                 <!-- Create Post Section-->
                                 <div class="card-header d-flex justify-content-between">
                                     <div class="header-title">
@@ -35,7 +35,7 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content bg-light">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Creating Post...</h1>
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color:#031B4e">Creating Post...</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -82,7 +82,7 @@
         ></post> -->
 
         <!-- POSTS -->
-        <div class="post row"> 
+        <div class="post row bg-white p-3 rounded-5"> 
                 <div class="col-lg-12">
                     <div class="d-flex justify-content-between">
                         <div class="me-2">
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="collapse" id="collapseExample">
-                    <div class="card card-body-collapse">
+                    <div class="card card-body-collapse h-100" style="height: 0px">
                         <comments 
                             :comments_wrapper_classes="['custom-scrollbar', 'comments-wrapper']"
                             :comments="comments"

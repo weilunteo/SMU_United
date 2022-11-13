@@ -1,6 +1,6 @@
 <template>
 
-  <HeaderSidebar/>
+  <Header/>
   <IndividualSection/>
   <ReviewSection/>
   <ModuleSection/>
@@ -10,7 +10,7 @@
     
     <script> /*Javascript */
     import { toHandlers } from 'vue';
-    import HeaderSidebar from '../components/feed-page/HeaderSidebar.vue';
+    import Header from '../components/feed-page/Header-Sidebar.vue';
     import IndividualSection from '../components/individual-page/IndividualSection.vue';
     import ReviewSection from '../components/individual-page/ReviewSection.vue';
     import ModuleSection from '../components/individual-page/ModuleSection.vue';
@@ -18,7 +18,7 @@
     export default {
     name: "IndividualPageView",
     components: {
-      HeaderSidebar,
+      Header,
       IndividualSection,
       ReviewSection,
       ModuleSection

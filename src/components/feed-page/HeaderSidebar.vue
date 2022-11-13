@@ -1,6 +1,4 @@
 <template>
-<tempate>
-
   <nav id="top-nav"> <!-- TOP NAVIGATION BAR -->
       <div class="top-container"> <!-- TOP CONTAINER -->
           
@@ -18,6 +16,9 @@
           </div> <!-- END OF HI, NAME -->
       </div> <!-- END OF TOP CONTAINER -->
     </nav><!-- END OF TOP NAVIGATION BAR -->
+
+
+
 
   
      
@@ -172,7 +173,6 @@
     <style>
 
     :root {
-
       --primary: #0069fc;
       --light: #EEEEEE;
       --dark: #0069fc;
@@ -205,6 +205,8 @@
       height: 100px;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
+
+   
 
     .hi-text{
       color: #FFF;
@@ -242,4 +244,6 @@
       color: black;
     }
 
+    
+    
     </style>

@@ -25,7 +25,7 @@ import { getDatabase, ref, onValue, child, get } from 'firebase/database';
 import HeaderSidebar from '../components/feed-page/HeaderSidebar.vue';
 
 export default {
-    name: "Test",
+    name: "Recommendation",
     components: "HeaderSidebar",
     setup() {
         const db = getDatabase();

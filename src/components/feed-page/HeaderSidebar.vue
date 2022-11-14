@@ -2,21 +2,23 @@
   <nav id="top-nav"> <!-- TOP NAVIGATION BAR -->
       <div class="top-container"> <!-- TOP CONTAINER -->
           
-    
           <div class="top-header"> <!-- SEARCH BAR -->
             <div class="top-header-links"><router-link to="/feed">HOME</router-link></div>
             <div class="top-header-links"><router-link to="/recommendation">RECOMMENDATION</router-link></div>
             <div class="top-header-links"><router-link to="/community-test">YOUR COMMUNITY</router-link></div>
           </div> <!-- END OF SEARCH BAR -->
+
           <div> <!-- HI, NAME -->
-            <div class="dropdown">
-                <img id = "avatar" src='https://ui-avatars.com/api/?name=John+Doe&background=random'>
-              <ul class="dropdown-menu">
-                <li><router-link to="/" >Sign Out</router-link></li>
-              </ul>
+            <div class="dropdown" >
+              <div data-bs-toggle="dropdown" aria-expanded="false">
+                <img width="40" height="40" class="rounded-circle" id = "avatar" src='https://ui-avatars.com/api/?name=John+Doe&background=random'>
+              </div>
+              <div class="dropdown-menu text-center fw-bold"  style="color:#031b4e">
+                    <router-link to="/" @click="signOut()">Logout</router-link>
             </div>
           </div> <!-- END OF HI, NAME -->
       </div> <!-- END OF TOP CONTAINER -->
+      </div>
     </nav><!-- END OF TOP NAVIGATION BAR -->
 
     <!-- <div class="modal" tabindex="-1">
@@ -182,9 +184,14 @@
           mobile_menu.classList.toggle('is-active')
         },
         
-        signout(){
-          const signout = document.querySelector('#signout');
-          signout.classList.toggle('is-active')
+        signOut(){
+          // const signout = document.querySelector('#signout');
+          // signout.classList.toggle('is-active')
+          // const signOut = () => {
+        firebase.auth().signOut()
+        router.push('/')
+      // }
+
         }
   
   

@@ -1,15 +1,15 @@
 <template>
     <HeaderSidebar/>
-    <div id="test">
+    <div id="test" class="container d-flex flex-column mt-4">
 
         <!-- CREATE POSTS -->
-        <div class="container d-flex flex-wrap justify-content-center align-items-center px-5">
-        <div class="create row w-100">
-                <div class="col-lg-12 mt-5 ">
+        <div class="d-flex flex-column justify-content-center mx-auto">
+        <div class="create row w-100 my-5">
+                <div class="col-lg-12 mt-5 " >
                 <div class="tab-content null" id="pills-tabContent-2">
                     <div class="tab-pane fade show active" id="profile-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
         
-                            <div class="create-card card w-100 h-50" id="post-modal-data">
+                            <div class="create-card card h-100 mh-25" id="post-modal-data">
                                 <!-- Create Post Section-->
                                 <div class="card-header d-flex justify-content-between">
                                     <div class="header-title">
@@ -19,7 +19,7 @@
                                 </div>
                                 <!-- to add post component here-->
 
-                                <div class="card-body">
+                                <div class="card-body" >
 
                                     <div class="d-flex align-items-center">
                                         <div class="user-img">

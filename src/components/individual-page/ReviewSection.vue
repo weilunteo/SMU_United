@@ -38,7 +38,7 @@
         <div class="form modal-content">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       <div class="subtitle">Say Something For</div>
-      <div class="title">University of London</div>
+      <div class="title">Australian National University</div>
       
       <div class="input-container ic1">
         <input id="title" class="input" type="text" placeholder="Title" />
@@ -200,7 +200,7 @@
 .title {
   color: #031b4e;
   font-family: sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   margin-top: 10px;
 }

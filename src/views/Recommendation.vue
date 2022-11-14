@@ -92,7 +92,7 @@ export default {
                     // }
                     //this.$router.push(`../gmaps3.html?test=${selectedCoordinate}`)
                     //this.$router.push({path: "../gmaps3.html"})
-                    window.open(`../gmaps3.html?lat=${selectedCoordinate.lat}&lng=${selectedCoordinate.lng}`);
+                    window.open(`../../gmaps3.html?lat=${selectedCoordinate.lat}&lng=${selectedCoordinate.lng}`);
                     // { lat:35.65095921173369 , lng:139.44748538703837 }
                     //return selectedCoordinate
                 }
